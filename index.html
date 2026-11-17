@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAFE - Food & Coffee</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h2>☕ MY CAFE</h2>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="cart-btn" onclick="openCart()">
+        🛒 Cart (<span id="count">0</span>)
+    </button>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-text">
+        <h1>WELCOME TO <span>MY CAFE</span></h1>
+        <h2>Fresh Coffee & Delicious Food</h2>
+        <p>Good Food, Good Mood, Great Memories!</p>
+        <a href="#menu" class="btn">Explore Menu</a>
+    </div>
+</section>
+
+<section class="menu" id="menu">
+    <h1>OUR SPECIAL MENU</h1>
+    <p>Enjoy our delicious food and drinks</p>
+
+    <div class="products">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=500" alt="Coffee">
+            <h2>Hot Coffee</h2>
+            <p>Fresh and hot coffee</p>
+            <h3>₹49</h3>
+            <button onclick="addCart('Hot Coffee',49)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=500" alt="Burger">
+            <h2>Veg Burger</h2>
+            <p>Delicious crispy burger</p>
+            <h3>₹89</h3>
+            <button onclick="addCart('Veg Burger',89)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500" alt="Pizza">
+            <h2>Cheese Pizza</h2>
+            <p>Extra cheesy pizza</p>
+            <h3>₹149</h3>
+            <button onclick="addCart('Cheese Pizza',149)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=500" alt="Noodles">
+            <h2>Hakka Noodles</h2>
+            <p>Spicy noodles</p>
+            <h3>₹99</h3>
+            <button onclick="addCart('Hakka Noodles',99)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1546173159-315724a31696?w=500" alt="Cold Coffee">
+            <h2>Cold Coffee</h2>
+            <p>Refreshing cold coffee</p>
+            <h3>₹69</h3>
+            <button onclick="addCart('Cold Coffee',69)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=500" alt="Donuts">
+            <h2>Chocolate Donut</h2>
+            <p>Sweet chocolate donut</p>
+            <h3>₹59</h3>
+            <button onclick="addCart('Chocolate Donut',59)">Add to Cart</button>
+        </div>
+
+    </div>
+</section>
+
+<section class="about" id="about">
+    <h1>ABOUT OUR CAFE</h1>
+    <p>
+        Welcome to My Cafe! We serve fresh coffee,
+        tasty snacks and delicious food.
+        Our mission is to give every customer
+        a wonderful food experience.
+    </p>
+</section>
+
+<section class="contact" id="contact">
+    <h1>CONTACT US</h1>
+    <p>📍 My Cafe, India</p>
+    <p>📞 +91 9876543210</p>
+    <p>✉️ mycafe@gmail.com</p>
+</section>
+
+<footer>
+    <h2>☕ MY CAFE</h2>
+    <p>© 2026 My Cafe | All Rights Reserved</p>
+</footer>
+
+<div class="modal" id="cartModal">
+    <div class="modal-content">
+        <span class="close" onclick="closeCart()">×</span>
+        <h2>🛒 My Cart</h2>
+        <div id="cartItems"></div>
+        <h3>Total: ₹<span id="total">0</span></h3>
+        <button class="order" onclick="checkout()">Place Order</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
